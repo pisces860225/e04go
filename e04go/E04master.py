@@ -87,7 +87,7 @@ class User(BaseModel):
     print(f"FastAPI MTV project created at '{base_path}'!")
 
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(
         description="管理 FastAPI 項目的工具，支援 MTV 架構生成"
     )
@@ -97,6 +97,9 @@ if __name__ == "__main__":
         default=".",
         help="應用程式的名稱。如果為 '.'，將在當前目錄下創建 'app' 資料夾。",
     )
-
     args = parser.parse_args()
     create_app(args.name)
+
+
+if __name__ == "__main__":
+    main()
